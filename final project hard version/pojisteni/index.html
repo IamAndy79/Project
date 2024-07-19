@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="description" content="Správa pojištěnců, databáze">
+        <meta name="author" content="Andrea Skačíková">
+        <meta name="keywords" content="pojištěnci, Skačíková, projekt, databáze">
+        <title>
+            Pojištěnci
+        </title>
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div id="topBar" class="topBar">
+            <h3 class="title">PojištěníApp</h3>
+            <button onclick="alert('You are here!')" class="topbtn">Pojištěnci</button>
+            <button disabled class="topbtn">O aplikaci</button>
+        </div>
+        <div class="content">
+            <h2>Pojištěnci</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Jméno a příjmení</th>
+                        <th>Telefon</th>
+                        <th>Věk</th>
+                        <th>Rodné číslo</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                <!-- Here will be the people -->
+                </tbody>
+            </table>
+            <br>
+            <h2>Nový pojištěnec</h2>
+            <div class="newPojistenec">
+                <img src="images/person.jpg">
+                <form method="post" action="#" id="form" onsubmit="addPerson();return false" > <!-- return false in case that the  page does not reload -->
+                    <div class="form">
+                        <div>
+                            <label for="jmeno">Jméno</label>
+                            <input type="text" id="jmeno" name="jmeno">
+                        </div>
+                        <div>
+                            <label for="prijmeni">Příjmení</label>
+                            <input type="text" id="prijmeni" name="prijmeni">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="tel">Telefon</label>
+                            <input type="text" id="tel" name="tel">
+                        </div>
+                        <div>
+                            <label for="vek">Věk</label>
+                            <input type="text" id="vek" name="vek">
+                        </div>
+                        <div>
+                            <label for="rodné-číslo">Rodné číslo</label>
+                            <input type="text" id="rodné-číslo" name="vek">
+                        </div>
+                    </div>
+                    <input type="submit" value="Uložit" class="save">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
